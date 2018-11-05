@@ -256,7 +256,7 @@ input[type=submit] {
 
  .main-section{
     width: 100%;
-    margin-right: 50px;
+    margin-right: 100px;
   }
 
 }
@@ -265,6 +265,7 @@ input[type=submit] {
 
   .container {
     width: 100%;
+    margin-right: 50px;
   }
  
   #masterhead {
@@ -280,9 +281,11 @@ input[type=submit] {
     margin-right: 50px;
   }
  
+  #main-container{
+    padding-right :40px;
+  }
  .main-section{
     width: 100%;
-    margin-right: 50px;
   }
 
 }
@@ -320,9 +323,12 @@ input[type=submit] {
     text-align: center;
   }
 
+  #main-container{
+    padding-right :40px;
+  }
  .main-section{
    padding:15px;
-   margin:20px 10px 10px 10px ;
+   margin:30px 20px ;
   }
 
   h1 {
