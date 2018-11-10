@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+
+
+<body>
+
+    <header id="masthead">
+        <div class="container">
+            <h1>Guess what letter I'm thinking of</h1>
+        </div>
+    </header>
+
+    <div id="main-container" class="container">
+        <section class="main-section">
+            <p id="directions-text">Press any alphabet key for guessing</p>
+            <img id="hangmanimg" src="assets/images/hangman_bg.jfif">
+            
+            <p id="userchoice-text"></p>
+            <p id="letteralready-text">letteralready-text</p>
+            <p id="remaining-text">remaining-text</p>
+            <p id="wins-text">wins-text</p>
+            <p id="numberofgames-text">remaining-text</p>
+
+            <!-- <audio id="audiocon" src="assets/images/Happy.mp3"  preload="auto" controls>
+                <p>Music</p>
+            </audio> -->
+            <embed 
+            src="assets/images/Happy.mp3"
+            loop="false"
+            autostart="false"
+            hidden="true"
+            mastersound>
+
+        </section>
+    </div>
+
+    </div> <!--   container   -->
+
+
+    <script src="assets/javascript/game.js"></script>
+</body>

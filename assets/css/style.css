@@ -265,7 +265,7 @@ input[type=submit] {
 
   .container {
     width: 100%;
-    margin-right: 50px;
+    /* margin-right: 50px; */
   }
  
   #masterhead {
