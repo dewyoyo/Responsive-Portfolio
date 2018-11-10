@@ -35,12 +35,12 @@ function initGame() {
     for (var i = 0; i < selectWord.length; i++) {
         selectWordArry.push(selectWord.charAt(i));
         console.log("Selected word array[" + i + "] is " + selectWordArry[i]);
-        tempWordArry[i] = "_";
+        tempWordArry[i] = "_ ";
     }
     console.log("selectWordArry : " + selectWordArry);
 
     var tempWord = "";
-    tempWord = tempWordArry.join();
+    tempWord = tempWordArry.join('');
     console.log("tempWord : " + tempWord);
     directionsText.textContent = "Type the Alphabet key you guess!";
     userChoiceText.textContent = tempWord;
@@ -72,7 +72,7 @@ document.onkeyup = function (event) {
                 tempWordArry[i] = userGuess;
             }
         }
-        console.log("tempWordArry: " + tempWordArry);
+        console.log("userGuesstempWordArry: " + tempWordArry);
 
         userChoiceText.textContent = tempWordArry;      
     }
@@ -86,10 +86,11 @@ document.onkeyup = function (event) {
 
     // if remining > 0 then
     if (remainingNum > 0) {
-        console.log("tempWordArry: " + tempWordArry.join('') + " selectWord: " + selectWord);
+        console.log("completetempWordArry: " + tempWordArry.join('') + " selectWord: " + selectWord);
         // if win
         if (tempWordArry.join('') === selectWord) {
             totalWins++;
+            userChoiceText.textContent = selectWord;
             alert("Congrat!!let's do it again!");
             selectWord = funcSelectWord();
             initGame();
