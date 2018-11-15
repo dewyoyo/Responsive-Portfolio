@@ -340,14 +340,14 @@ body {
   */
 /* ========================== unit-r-game ========================*/
   .char-image {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border: double 7px #777777;
     border-radius: 16px;
     -webkit-box-decoration-break: clone;
     -o-box-decoration-break: clone;
     box-decoration-break: clone;
-    padding: 20px;
+    padding: 7px;
   }
 
   button {
@@ -365,7 +365,7 @@ body {
     over the preceding element.
 */
 .char-image:hover {
-  border: black;
+  border: dashed 5px #DAA520;
 }
 
   /* ======================================================= */

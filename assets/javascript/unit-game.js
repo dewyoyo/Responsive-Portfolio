@@ -60,6 +60,8 @@ function continueGame() {
     $("#attack-msg").text("");
     $("#attack-msg").hide();
     $("#reset-btn").hide();
+    $("#charHP-msg").hide();
+    $("#defHP-msg").hide();
 }
 
 //     console.log(Object.keys(gameImg).length);  for (var i = 0; i < Object.keys(gameImg).length; i++)
@@ -144,6 +146,11 @@ $("#attack-btn").on("click", function () {
             $("#attack-msg").show();
             $("#attack-msg").text("You attacked " + selectedDef + " for " + selectedAP + " damage. " + selectedDef + " attacked you back for " + DefenderCAP + " damage.");
 
+            $("#charHP-msg").show();
+            $("#charHP-msg").text("HP: " + selectedHP);
+            $("#defHP-msg").show();
+            $("#defHP-msg").text("HP: " + DefenderHP);
+
             attackStarted = true;
         }
         else {
@@ -156,6 +163,9 @@ $("#attack-btn").on("click", function () {
             console.log("22222 DefenderHP: " + DefenderHP);
             console.log("22222 selectedHP: " + selectedHP);
             $("#attack-msg").text("You attacked " + selectedDef + " for " + selectedAP + " damage. " + selectedDef + " attacked you back for " + DefenderCAP + " damage.");
+
+            $("#charHP-msg").text("HP: " + selectedHP);
+            $("#defHP-msg").text("HP: " + DefenderHP);
         }
 
         // All of the same game win-lose logic applies. So the rest remains unchanged.
