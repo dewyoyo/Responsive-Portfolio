@@ -368,32 +368,6 @@ body {
   border: dashed 5px #DAA520;
 }
 
-/* ========================== trivia game ========================*/
-
-#triv-container {
-  padding-top: 130px;
-  min-height: calc(100vh - 70px);
-  text-align: center;
-}
-
-h4:hover {
-border: dashed 5px #dddddd;
-background: #4aaaa5;
-color: #ffffff;
-}
-
-#remaining-time {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-  font-size: 22pt;
-  /* color: blue */
-}
-.ques-div{
-  font-family: 'Times New Roman', Times, serif;
-}
-.ques-div{
-  font-size: 18pt;
-}
   /* ======================================================= */
   /* ==================screen resolution==================== */
   /*  ##Screen = B/w 980px  */
