@@ -370,6 +370,13 @@ body {
 
 /* ========================== trivia game ========================*/
 
+#trivia-body {
+  /* padding-top: 100px; */
+  background: url("../images/giphy_universe.gif");
+  background-size: cover;
+  /* background-size: 100px 80px; */
+  /* background-repeat: no-repeat; */
+}
 #triv-container {
   padding-top: 130px;
   min-height: calc(100vh - 70px);
