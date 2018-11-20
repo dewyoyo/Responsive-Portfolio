@@ -1,39 +1,73 @@
 var triviaList = [
     [
-        "What is the dot of an i or j called?", //question
-        "tittle",       //examp1
-        "dot",          //examp2
-        "spec",         //examp3
-        "spot",         //examp4
-        1,              //right answer
-        "he dot of an i or j is called a tittle because it is so small."   //explanation     //interesting information
+        "Which Nickelodeon adventurer grew quickly from seven to ten years old, and moved to the city in a spin-off in 2014?", //question
+        "Henry Danger",                 //examp1
+        "Dora the Explorer",            //examp2
+        "SpongeBob SquarePants",        //examp3
+        "The Bureau of Magical Things",   //examp4
+        2,              //right answer
+        "The spin-off series is called Dora and Friends: Into the City.",   //explanation ,interesting information
+        "assets/images/giphy_dora.gif"
     ],
     [
         "What are Chubby Hubby, Half-Baked and Vermonty Python?",
-        "Ice cream flavours",
         "Punk bands",
         "Comedians",
         "Cars",
-        1,
-        "They are just three of Ben & Jerry's ice cream flavours. Vermonty Python is coffee liqueur flavoured with cookie pieces and fudge. Half-Baked is a blend of chocolate and vanilla ice cream with gobs of cookie dough and pieces of brownie, and Chubby Hubby is vanilla ice cream with peanut-butter filled pretzel pieces and a ribbon of fudge."
+        "Ice cream flavours",
+        4,
+        "They are just three of Ben & Jerry's ice cream flavours. Vermonty Python is coffee liqueur flavoured with cookie pieces and fudge. Half-Baked is a blend of chocolate and vanilla ice cream with gobs of cookie dough and pieces of brownie, and Chubby Hubby is vanilla ice cream with peanut-butter filled pretzel pieces and a ribbon of fudge.",
+        "assets/images/giphy_icecream.gif"
     ],
     [
-        "The first portable electric vacuum was released in 1905. Why did this machine not sell well?",
-        "It weighed 92 pounds and had a fan 18 inches in diameter",
-        "Electricity was not invented yet",
-        "People preferred to have professionals come in and clean",
-        "Beating rugs is good exercise for arm and back muscles",
-        1,
-        "Yep, you wouldn't catch me lugging around a 92 pound vacuum cleaner either! One of the most famous vacuum cleaner companies sprang up not long after this in 1908 when James Murray Spangler sold his electric suction vacuum cleaner patent to his cousin's husband, William Hoover. So began 'Hoover's Electric Suction Sweeper Company'. Hoover was so successful that to this day people refer to doing the vacuuming as 'hoovering'.Not that Hoover had it all his own way, the 'Eureka Vacuum Cleaner Company' were so popular that by 1919 they were making 2,000 vacuums a day - and amongst the attatchments you got with your vacuum was a blower to dry your hair! Possibly the greatest advancement in vacuums since this time has been iRobots 'Roomba', a small, disc-shaped vacuum that navigates itself around your house independently - genius!"
+        "Who is the pre-Civil War author of a short story about a beating heart beneath the floorboards?",
+        "Roald Dahl",
+        "Emily Dickinson",
+        "Edgar Allan Poe",
+        "Robert Frost",
+        3,
+        "The famous piece is The Tell-Tale Heart.",
+        "assets/images/EdgarAllanPoe.jpg"
     ],
     [
-        "According to legend, which plant screams when the root is dug up?",
-        "Mandrake",
-        "Carrot",
-        "Orchid",
-        "Daffodil",
+        "Which school was Maya Lin attending when she designed the Vietnam Veterans Memorial as part of a class assignment?",
+        "Yale University",
+        "UC Berkeley",
+        "Stanford University",
+        "Massachusetts Institute of Technology (MIT)",
         1,
-        "The Mandrake is native to Central and Southern Europe, and all parts of the plant are poisonous. It has long been used in sorcery rituals, and some cultures believe it to be an aid to conception. According to folklore all who hear the scream are immediately killed. It's difficult to understand how people know that it screams if that's the case, but such legends are often far more interesting than reality!"
+        "Initially scorned, the memorial is now cherised by millions of visitors each year.",
+        "assets/images/Yale_University.png"
+    ],
+    [
+        "What cattle end-product was named Wisconsin's Unofficial State Muffin in 1989?",
+        "Jello",
+        "Cow Chip",
+        "Dish soap",
+        "Candles",
+        2,
+        "If you're not sure what a cow chip is, just please don't try to eat this 'muffin'. A cow chip is a dried pile of cow dung that is used at cow-chip-throwing competitions. Chips are often tossed Frisbee-style. They can fly more than 150 feet!",
+        "assets/images/chow-chip.jpg"
+    ],
+    [
+        "Which patriotic Bostonian won the acquittal of most of the British troops involved in the 1770 Boston Massacre that killed five civilians?",
+        "Samuel Adams",
+        "James Otis",
+        "John Adams",
+        "John Hancock",
+        3,
+        "He strongly believed all people deserved a fair trial and a thorough defense.",
+        "assets/images/johnAdams.jfif"
+    ],
+    [
+        "Which U.S. state has the longest coastline?",
+        "Delaware",
+        "Georgia",
+        "Kansas",
+        "Alaska",
+        4,
+        "It has 6,640 miles of coastline.",
+        "assets/images/giphy-Alaska.gif"
     ],
     [
         "What is'The Devil's Picture Book'?",
@@ -42,9 +76,11 @@ var triviaList = [
         "A bathroom mirror",
         "Flat pack assembly instructions",
         1,
-        "The first decks of cards, from which modern playing cards have descended, were Tarot cards which are still used by fortune tellers, and the soubriquet derives from the bible forbidding any form of divination. Comics can be great fun and I find mirrors quite useful (so long as the lighting is subdued) but I'm convinced that assembly instructions are compiled by using an internet translater to translate comprehensible English into Japanese, translating the results into Italian, then converting the Italian translation back into English so that it makes no sense at all!"
+        "The first decks of cards, from which modern playing cards have descended, were Tarot cards which are still used by fortune tellers, and the soubriquet derives from the bible forbidding any form of divination. Comics can be great fun and I find mirrors quite useful (so long as the lighting is subdued) but I'm convinced that assembly instructions are compiled by using an internet translater to translate comprehensible English into Japanese, translating the results into Italian, then converting the Italian translation back into English so that it makes no sense at all!",
+        "assets/images/giphy-deckofcards.gif"
     ]
 ];
+var shuffTriviaList = shuffle(triviaList);
 // for showing timer decrement
 var intervalId;
 var intervalTime; //  30 seconds
@@ -58,6 +94,23 @@ var numOfWrongAns = 0;
 var NumOfUnans = 0;
 $("#restart-btn").hide();
 
+// when restart the game, shuffle the trivia list.
+function shuffle(array) {
+    var m = array.length;
+    var t, i;
+
+    // While there remain elements to shuffle…
+    while (m) {
+        // Pick a remaining element…
+        i = Math.floor(Math.random() * m--);
+
+        // And swap it with the current element.
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+    }
+    return array;
+}
 
 //  The decrement function for interval timer
 function decrement(k) {
@@ -73,7 +126,9 @@ function decrement(k) {
         // show the 'times up' message
         $(".ques-div").html("<p style='color:black;font-size:18pt;font-weight:bold;'>Times Up!</p>");
         // $(".ques-div").append("The Correct Answer was " + anskey + ". <br>");
-        $(".ques-div").append(triviaList[k][6]);
+        //explanation and img
+        $(".ques-div").append(shuffTriviaList[k][6] + "<br>");
+        $(".ques-div").append("<img id='trivia-img' src=" + shuffTriviaList[k][7] + ">");
         // console.log(".ques-div: " + $(".ques-div").text());
         timerId = setTimeout(retriveQues, ansTime, (k + 1));
         clearInterval(intervalId);
@@ -97,7 +152,10 @@ function correctAns(k) {
     console.log("numOfCorrAns: " + numOfCorrAns);
     resetDiv();
     $(".ques-div").html("<p style='color:black;font-size:18pt;font-weight:bold;'>Correct</p>");
-    // console.log(".ques-div: " + $(".ques-div").text());
+    //explanation and img
+    $(".ques-div").append(shuffTriviaList[k][6] + "<br>");
+    $(".ques-div").append("<img id='trivia-img' src=" + shuffTriviaList[k][7] + ">");
+    console.log(".ques-div: " + $(".ques-div").text());
     timerId = setTimeout(retriveQues, ansTime, (k + 1));
     clearInterval(intervalId);
 };
@@ -108,7 +166,9 @@ function wrongAns(anskey, k) {
     resetDiv();
     $(".ques-div").html("<p style='color:black;font-size:18pt;font-weight:bold;'>Nope</p>");
     $(".ques-div").append("The Correct Answer was " + anskey + ". <br>");
-    $(".ques-div").append(triviaList[k][6]);
+    //explanation and img
+    $(".ques-div").append(shuffTriviaList[k][6] + "<br>");
+    $(".ques-div").append("<img id='trivia-img' src=" + shuffTriviaList[k][7] + ">");
     // console.log(".ques-div: " + $(".ques-div").text());
     timerId = setTimeout(retriveQues, ansTime, (k + 1));
     clearInterval(intervalId);
@@ -119,8 +179,8 @@ function retriveQues(i) {
     resetDiv();
     resetTimer();
 
-    // triviaList.length > i then show the total game result
-    if (i >= triviaList.length) {
+    // shuffTriviaList.length > i then show the total game result
+    if (i >= shuffTriviaList.length) {
         console.log("Game Over!");
         $(".ques-div").html("<p style='color:black;font-size:18pt;font-weight:bold;'>All done, here's how you did!</p>");
         $(".ques-div").append("Correct Answer: " + numOfCorrAns + "<br>");
@@ -133,14 +193,14 @@ function retriveQues(i) {
     else {
 
         // Question, examples and answer
-        $(".ques-div").html("<p>Q : " + triviaList[i][0] + "</p>");
-        $(".exmp-div").html("<h4 id='exmp1' class='exmp'>" + "1: " + triviaList[i][1] + "</h4>");
-        $(".exmp-div").append("<h4 id='exmp2' class='exmp'>" + "2: " + triviaList[i][2] + "</h4>");
-        $(".exmp-div").append("<h4 id='exmp3' class='exmp'>" + "3: " + triviaList[i][3] + "</h4>");
-        $(".exmp-div").append("<h4 id='exmp4' class='exmp'>" + "4: " + triviaList[i][4] + "</h4>");
-        var answer = triviaList[i][5];
+        $(".ques-div").html("<p>Q : " + shuffTriviaList[i][0] + "</p>");
+        $(".exmp-div").html("<h4 id='exmp1' class='exmp'>" + "1: " + shuffTriviaList[i][1] + "</h4>");
+        $(".exmp-div").append("<h4 id='exmp2' class='exmp'>" + "2: " + shuffTriviaList[i][2] + "</h4>");
+        $(".exmp-div").append("<h4 id='exmp3' class='exmp'>" + "3: " + shuffTriviaList[i][3] + "</h4>");
+        $(".exmp-div").append("<h4 id='exmp4' class='exmp'>" + "4: " + shuffTriviaList[i][4] + "</h4>");
+        var answer = shuffTriviaList[i][5];
 
-        // console.log("triviaList[i][1] " + triviaList[i][0]);
+        // console.log("shuffTriviaList[i][1] " + shuffTriviaList[i][0]);
         // console.log("#exmp1: " + $("#exmp1").text());
 
         // timer(interval timer)
@@ -159,7 +219,7 @@ function retriveQues(i) {
                 correctAns(i);
             }
             else {
-                wrongAns(triviaList[i][answer], i);
+                wrongAns(shuffTriviaList[i][answer], i);
             };
         });
     };
@@ -174,5 +234,6 @@ $(".exmp").on("click", function () {
 // restart
 $("#restart-btn").on("click", function () {
     console.log("click start button.")
+    shuffTriviaList = shuffle(shuffTriviaList);
     retriveQues(0);
 });

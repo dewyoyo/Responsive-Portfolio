@@ -394,6 +394,11 @@ color: #ffffff;
 .ques-div{
   font-size: 18pt;
 }
+#trivia-img {
+  width: 200px;
+  height: 200px;
+  border: solid 5px #777777;
+}
   /* ======================================================= */
   /* ==================screen resolution==================== */
   /*  ##Screen = B/w 980px  */
