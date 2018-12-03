@@ -372,7 +372,7 @@ body {
 
 #trivia-body {
   /* padding-top: 100px; */
-  background: url("../images/giphy-background.gif");
+  /* background: url("../images/giphy-background.gif"); */
   background-color:#cccccc;
   /* background-size: cover; */
   /* background-size:900px 1000px; */
@@ -407,6 +407,51 @@ color: #ffffff;
   height: 200px;
   border: solid 5px #777777;
 }
+
+/* ========================== train schedule ========================*/
+.jumbotron{
+  color : white;
+  background-color : #004c6d;
+  text-align: center;
+}
+.card-header {
+  color : white;
+  background-color : #548300;
+}
+#train-head-row {
+  /* color : white; */
+  border-top: solid lightgray 2px;
+  margin : 0px;
+  padding : 5px 0;
+  font-weight: bold;
+  font-size: 11pt;
+}
+#train-current-row {
+  margin: 0;
+  padding: 0;
+  text-align:left;
+  height: 30px;
+  font-size: 10pt;
+}
+#train-current-row:nth-child(even) {
+  background-color: lightgray;
+}
+#update-train, #remove-train {
+  margin : 4px 2px;
+  padding : 3px;
+  font-size : 9pt;
+  text-align: center;
+  background-color: darkgray;
+  color: white;
+}
+#form-add-train {
+  font-size: 11pt;
+}
+#add-train {
+  color : white;
+  background-color: #167fa6;
+}
+
   /* ======================================================= */
   /* ==================screen resolution==================== */
   /*  ##Screen = B/w 980px  */
