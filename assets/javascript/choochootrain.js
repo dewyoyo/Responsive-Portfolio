@@ -54,13 +54,13 @@
             // var minAway = moment(nextT, "HH:mm").diff(moment(nowT, "HH:mm"), "minutes");
 
             var newRow = "<div class='row' id='train-current-row'>" +
-                "<div class='col-md-2' id='update-trainID' contenteditable='true'> " + trainID + "</div>" +
-                "<div class='col-md-2' id='update-desti' contenteditable='true'> " + destination + " </div>" +
-                "<div class='col-md-2' id='update-freq' contenteditable='true'> " + frequency + " </div>" +
-                "<div class='col-md-2' id='update-arrival' type='time' contenteditable='true'> " + moment(nextTrain).format("HH:mm") + " </div>" +
-                "<div class='col-md-2'> " + tMinutesTillTrain + " </div>" +
-                "<button class='btn btn-default' id='update-train' type='submit' data-train-key=" + dataKey + ">update</button>" +
-                "<button class='btn btn-default' id='remove-train' type='submit' data-train-key=" + dataKey + ">remove</button>";
+                "<div class='col-xs-12 col-sm-6 col-md-2' id='update-trainID' contenteditable='true'> " + trainID + "</div>" +
+                "<div class='col-xs-12 col-sm-6 col-md-2' id='update-desti' contenteditable='true'> " + destination + " </div>" +
+                "<div class='col-xs-12 col-sm-6 col-md-2' id='update-freq' contenteditable='true'> " + frequency + " </div>" +
+                "<div class='col-xs-12 col-sm-6 col-md-2' id='update-arrival' type='time' contenteditable='true'> " + moment(nextTrain).format("HH:mm") + " </div>" +
+                "<div class='col-xs-12 col-sm-6 col-md-2'> " + tMinutesTillTrain + " </div>" +
+                "<button class='btn btn-default' class='col-xs-12 col-sm-6 col-md-2' id='update-train' type='submit' data-train-key=" + dataKey + ">update</button>" +
+                "<button class='btn btn-default' class='col-xs-12 col-sm-6 col-md-2' id='remove-train' type='submit' data-train-key=" + dataKey + ">remove</button>";
 
             $("#current-schedule").append(newRow);
 
